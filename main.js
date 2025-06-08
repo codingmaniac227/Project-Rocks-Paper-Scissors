@@ -1,3 +1,4 @@
+
 let humanScore = 0;
 let computerScore = 0;
 
@@ -34,9 +35,18 @@ function getHumanChoice() {
     }
 }
 
-function playGame() {
+
+// Added event listener for the Play Game button
+let playButton = document.getElementById("playgameEl")
+
+const audio = document.getElementById('kahootMusic');
+audio.muted = true;
+
+playButton.addEventListener('click', function() {
     console.log("Welcome to the game! You will play 12 rounds.");
-    
+    audio.muted = false;
+    audio.play()
+
     for (let i = 0; i < 12; i++) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
@@ -44,7 +54,7 @@ function playGame() {
     }
 
     console.log(`Final Score: Human - ${humanScore} | Computer - ${computerScore}`);
-}
+})
 
 function playRound(humanChoice, computerChoice) {
     // Rock vs. Paper
