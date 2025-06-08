@@ -1,28 +1,42 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Rock Paper Scissors</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="kahootMusic" autoplay loop>
+        <source src="https://static.wikia.nocookie.net/kahoot/images/1/13/Kahoot_British_Month.ogg/revision/latest?cb=20211218031406" type="audio/ogg">
+    </audio>
 
-    <body>
-        <div id="startscreen">
-            <audio id="kahootMusic" autoplay loop>
-                <source src="https://static.wikia.nocookie.net/kahoot/images/1/13/Kahoot_British_Month.ogg/revision/latest?cb=20211218031406" type="audio/ogg">
-            </audio>
-            <div>
-                <h1><span id="heading">Rock Paper</br>Scissors</span></h1>
-            </div>
-            <div>
-                <button id="playgameEl">Start Game</button>
-            </div>
+    <div id="startscreen">
+        <h1><span class="heading">Rock Paper</br>Scissors</span></h1>
+        <div id="start-box" >
+            <button id="playgameEl">Start Game</button>
         </div>
+    </div>
 
-        <!-- JAVASCRIPT PORTION -->
-        <script src="main.js"></script>
+    <div id="roundselect"    style="display: none;">
+        <h1><span class="heading">Rock Paper</br>Scissors</span></h1>
+        <div id="round-box">
+            <span id="round-inquiry">Number of Rounds</span>
+            <input type="number" id="roundsinput-el" min="1" max="10" value="3">
+            <button id="startGame" onclick="playRound()">START</button>
+        </div>
+    </div>
 
-    </body>
+    <div id="gamescreen" style="display: none;">
+        <nav>
+            <ul>
+                <li><button>Exit Game</button></li>
+                <li>Tubby Developments</li>
+            </ul>
+        </nav>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
 </html>

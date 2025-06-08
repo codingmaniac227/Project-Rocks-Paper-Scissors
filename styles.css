@@ -1,56 +1,126 @@
+/* Global Styles */
 body {
-font-family: monospace;
+    font-family: monospace;
     background-color: black;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    padding: 0;
+    height: 100vh;
+    background-image: url('./media/app-background.gif');
+    background-size: 40% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transform: scale(0.8);
+    transform-origin: top left;
+    width: 125%; /* Compensates for scaling */
+    height: 125%; /* Compensates for scaling */
 }
 
-
-#startscreen {
+/* Centering Content */
+#startscreen, #roundselect, #gamescreen {
     text-align: center;
-}
-
-#startscreen > div > h1 {
     display: flex;
-    margin: 150px;
-    flex-wrap: 2;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
 }
 
-#heading {
+/* Heading Styles */
+.heading {
     font-size: 60px;
     color: greenyellow;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-#playgameEl {
+/* Button Styles */
+#playgameEl, #roundsinput-el, #startGame {
     color: white;
     background-color: aqua;
     font-size: x-large;
     font-family: monospace;
+    text-align: center;
     padding: 30px;
     border-radius: 100px;
     border-width: 10px;
     border-style: solid;
     border-color: greenyellow;
-    width: 300px;
+    width: 400px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#playgameEl:hover {
-    transform: scale(1.1);
-    background-color: deepskyblue;
+#start-box {
+    margin-top: 240px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
 }
 
-#playgameEl:focus {
-    outline: none;
-  }
+#round-box {
+    margin-top: 160px;
+}
 
-#playgameEl .button-text {
+#round-box {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 40px;
+    font-size: x-large;
+}
+
+/* Input Field Styles */
+#roundsinput-el {
+    width: 200px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Round Inquiry Styles */
+#round-inquiry {
+    font-size: larger;
+    color: greenyellow;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+
+}
+
+/* START BUTTON */
+#startGame {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+
+#gamescreen nav {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    padding: 10px;
     position: relative;
-    z-index: 1;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+#gamescreen nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#gamescreen nav li {
+    margin: 0 10px;
+}
+
+#gamescreen nav button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#gamescreen nav button:hover {
+    background-color: #ff4500;
 }
