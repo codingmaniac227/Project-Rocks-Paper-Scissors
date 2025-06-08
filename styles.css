@@ -1,0 +1,56 @@
+body {
+font-family: monospace;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+#startscreen {
+    text-align: center;
+}
+
+#startscreen > div > h1 {
+    display: flex;
+    margin: 150px;
+    flex-wrap: 2;
+}
+
+#heading {
+    font-size: 60px;
+    color: greenyellow;
+}
+
+#playgameEl {
+    color: white;
+    background-color: aqua;
+    font-size: x-large;
+    font-family: monospace;
+    padding: 30px;
+    border-radius: 100px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: greenyellow;
+    width: 300px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#playgameEl:hover {
+    transform: scale(1.1);
+    background-color: deepskyblue;
+}
+
+#playgameEl:focus {
+    outline: none;
+  }
+
+#playgameEl .button-text {
+    position: relative;
+    z-index: 1;
+}
